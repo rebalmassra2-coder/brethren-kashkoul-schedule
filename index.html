@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كنيسة الإخوة - كشكول</title>
+  <meta name="description" content="موقع كنيسة الإخوة في كشكول - مواعيد الاجتماعات والصلاة والشبيبة ومدارس الأحد والناشئة" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body data-season="winter">
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-icon">✝</span>
+        <span class="brand-text">كنيسة الإخوة</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="القائمة" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#meetings">الاجتماعات</a></li>
+        <li><a href="#seasons">التوقيت الشتوي والصيفي</a></li>
+        <li><a href="#youth">الشبيبة</a></li>
+        <li><a href="#sunday-school">مدارس الأحد والناشئة</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="home">
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="rays" aria-hidden="true"></div>
+    <div class="sun" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="window">
+        <div class="window-cross">
+          <span class="window-halo"></span>
+          <span class="window-halo halo-2"></span>
+          <span class="cross">✝</span>
+        </div>
+        <h1>كنيسة الإخوة</h1>
+        <p class="hero-location">كشكول</p>
+        <p class="hero-verse">هُوَذَا مَا أَحْسَنَ وَمَا أَجْمَلَ أَنْ يَسْكُنَ الإِخْوَةُ مَعًا !</p>
+        <p class="hero-verse-ref">مزمور 133 : 1</p>
+      </div>
+
+      <div class="next-meeting" id="nextMeeting" aria-live="polite">
+        <span class="live-dot"></span>
+        <span class="next-label">الاجتماع القادم</span>
+        <span class="next-text" id="nextText">...</span>
+      </div>
+
+      <a href="#meetings" class="btn">مواعيد الاجتماعات</a>
+    </div>
+
+    <svg class="hills" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,150 C240,90 460,190 720,140 C980,90 1200,170 1440,120 L1440,260 L0,260 Z" fill="#2a4a9a" opacity="0.55"/>
+      <path d="M0,200 C300,150 600,230 900,190 C1100,165 1300,200 1440,185 L1440,260 L0,260 Z" fill="#0f1e47"/>
+      <g transform="translate(1040 92)">
+        <rect x="0" y="52" width="110" height="60" fill="#08122e"/>
+        <polygon points="-8,52 55,12 118,52" fill="#08122e"/>
+        <rect x="40" y="-8" width="30" height="60" fill="#08122e"/>
+        <polygon points="36,-8 55,-58 74,-8" fill="#08122e"/>
+        <rect x="53" y="-84" width="4" height="28" fill="#08122e"/>
+        <rect x="46" y="-76" width="18" height="4" fill="#08122e"/>
+        <path d="M49,40 v-12 a6,6 0 0 1 12,0 v12 z" fill="#ffd27a" class="church-light"/>
+        <path d="M14,92 v-16 a6,6 0 0 1 12,0 v16 z" fill="#ffd27a" class="church-light"/>
+        <path d="M84,92 v-16 a6,6 0 0 1 12,0 v16 z" fill="#ffd27a" class="church-light"/>
+      </g>
+      <path d="M0,235 C360,205 720,260 1080,232 C1250,218 1360,230 1440,222 L1440,260 L0,260 Z" fill="#fffaf0"/>
+    </svg>
+  </header>
+
+  <!-- ================= MEETINGS ================= -->
+  <section class="section meetings" id="meetings">
+    <div class="tint tint-winter" aria-hidden="true"></div>
+    <div class="tint tint-summer" aria-hidden="true"></div>
+
+    <div class="container">
+      <h2 class="section-title">أوقات الاجتماعات</h2>
+      <p class="section-subtitle">نرحب بكم في جميع اجتماعات الكنيسة</p>
+
+      <div class="season-wrap" id="seasons">
+        <div class="season-switch" id="seasonSwitch" role="group" aria-label="اختر التوقيت">
+          <span class="season-thumb" aria-hidden="true"></span>
+          <button type="button" class="season-btn" data-season="winter" aria-pressed="true">❄️ التوقيت الشتوي</button>
+          <button type="button" class="season-btn" data-season="summer" aria-pressed="false">☀️ التوقيت الصيفي</button>
+        </div>
+        <p class="season-note" id="seasonNote">في الشتاء تبدأ الاجتماعات 6:00 مساءً، وفي الصيف 7:00 مساءً</p>
+      </div>
+
+      <div class="tiles">
+
+        <article class="tile tile-gold featured reveal" data-day="0" data-winter="6:00" data-summer="7:00">
+          <span class="today-flag">اليوم</span>
+          <div class="tile-icon">⛪</div>
+          <div class="tile-head">
+            <span class="day-badge">الأحد</span>
+            <h3>اجتماع العبادة والكلمة</h3>
+          </div>
+          <div class="tile-time"><span class="t-main">6:00</span><span class="t-ampm">مساءً</span></div>
+          <div class="tile-alt"></div>
+          <p class="tile-note">الاجتماع الرئيسي للعبادة والسجود والكلمة</p>
+        </article>
+
+        <article class="tile tile-blue reveal" data-day="4" data-winter="6:00" data-summer="7:00">
+          <span class="today-flag">اليوم</span>
+          <div class="tile-icon">🙏</div>
+          <div class="tile-head">
+            <span class="day-badge">الخميس</span>
+            <h3>اجتماع الصلاة</h3>
+          </div>
+          <div class="tile-time"><span class="t-main">6:00</span><span class="t-ampm">مساءً</span></div>
+          <div class="tile-alt"></div>
+          <p class="tile-note">نجتمع معًا لنصلّي ونرفع طلباتنا للرب</p>
+        </article>
+
+        <article class="tile tile-green reveal" data-day="6" data-winter="6:00" data-summer="7:00">
+          <span class="today-flag">اليوم</span>
+          <div class="tile-icon">📖</div>
+          <div class="tile-head">
+            <span class="day-badge">السبت</span>
+            <h3>درس الكتاب المقدس</h3>
+          </div>
+          <div class="tile-time"><span class="t-main">6:00</span><span class="t-ampm">مساءً</span></div>
+          <div class="tile-alt"></div>
+          <p class="tile-note">دراسة وتأمّل في كلمة الله</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUTH ================= -->
+  <section class="section" id="youth">
+    <div class="container">
+      <h2 class="section-title">الشبيبة</h2>
+      <p class="section-subtitle">اجتماع يوم الجمعة</p>
+
+      <article class="banner banner-youth reveal" data-day="5">
+        <span class="today-flag">اليوم</span>
+        <div class="embers" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="banner-time">
+          <span class="bt-num">1:00</span>
+          <span class="bt-unit">ظهرًا</span>
+        </div>
+        <div class="banner-body">
+          <div class="tile-head">
+            <span class="day-badge">الجمعة</span>
+            <h3>اجتماع الشبيبة</h3>
+          </div>
+          <p>لقاءات ودراسات في الكتاب المقدس للشبيبة</p>
+        </div>
+        <div class="banner-icon" aria-hidden="true">🌹</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= SUNDAY SCHOOL + NASHIA ================= -->
+  <section class="section section-kids" id="sunday-school">
+    <div class="container">
+      <h2 class="section-title">مدارس الأحد والناشئة</h2>
+      <p class="section-subtitle">اجتماع واحد يجمع الأطفال والناشئة</p>
+
+      <article class="banner banner-kids reveal" data-day="5">
+        <span class="today-flag">اليوم</span>
+        <div class="floaters" aria-hidden="true">
+          <span>⭐</span><span>☁️</span><span>🤗</span><span>⭐</span><span>🎈</span><span>✨</span>
+        </div>
+        <div class="banner-icon" aria-hidden="true">👧👦</div>
+        <div class="banner-body">
+          <div class="tile-head">
+            <span class="day-badge">الجمعة</span>
+            <h3>اجتماع مدارس الأحد والناشئة</h3>
+          </div>
+          <p>مرحبون بجميع الأطفال والناشئة في تعاليم الكتاب المقدس</p>
+        </div>
+        <div class="banner-time">
+          <span class="bt-num">4:00</span>
+          <span class="bt-unit">عصرًا</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">✝</span>
+        <span>كنيسة الإخوة - كشكول</span>
+      </div>
+      <p class="footer-verse">فَرِحْتُ بِالْقَائِلِينَ لِي: «إِلَى بَيْتِ الرَّبِّ نَذْهَبُ»</p>
+      <p class="footer-verse-ref">مزمور 122 : 1</p>
+      <p class="footer-copy">جميع الحقوق محفوظة © ٢٠٢٥</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="العودة للأعلى">↑</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
